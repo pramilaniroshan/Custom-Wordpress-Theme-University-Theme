@@ -19,7 +19,7 @@
 
   <div class="container container--narrow page-section">
 
-      <?php 
+      <?php
         while(have_posts()){
           the_post();
           
