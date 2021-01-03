@@ -2,9 +2,11 @@
 
 function university_files(){
     wp_enqueue_script('main_js',get_theme_file_uri('/js/scripts-bundled.js'),NULL,'1.0',true);
+   // wp_enqueue_script('aos_scrolling_js','https://unpkg.com/aos@2.3.1/dist/aos.js',NULL,'1.0',true);
     wp_enqueue_style('forn_awesom','//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
     wp_enqueue_style('google_fonts','https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
     wp_enqueue_style('university_css',get_stylesheet_uri());
+   // wp_enqueue_style('aos_scrolling_css','https://unpkg.com/aos@2.3.1/dist/aos.css');
 }
 
 function university_features(){

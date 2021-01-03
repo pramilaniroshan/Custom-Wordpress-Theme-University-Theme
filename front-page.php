@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <div class="full-width-split group">
+    <div class="full-width-split group" >
       <div class="full-width-split__one">
         <div class="full-width-split__inner">
           <h2 class="headline headline--small-plus t-center">Upcoming Events</h2>
@@ -31,10 +31,14 @@
 
           $home_page_events->the_post(  ); ?>
 
-          <div class="event-summary">
+          <div class="event-summary" >
             <a class="event-summary__date t-center" href="#">
-              <span class="event-summary__month">Mar</span>
-              <span class="event-summary__day">25</span>
+              <span class="event-summary__month"><?php $event_date = new DateTime (get_field('event_date'));
+               echo $event_date->format('M');
+              ?></span>
+              <span class="event-summary__day"><?php $event_date = new DateTime (get_field('event_date'));
+               echo $event_date->format('d');
+              ?></span>
             </a>
             <div class="event-summary__content">
               <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink(  ) ?>"><?php the_title() ?></a></h5>
@@ -84,7 +88,7 @@
       </div>
     </div>
 
-    <div class="hero-slider">
+    <div class="hero-slider" >
       <div data-glide-el="track" class="glide__track">
         <div class="glide__slides">
           <div class="hero-slider__slide" style="background-image: url('<?php echo get_theme_file_uri('images/bus.jpg') ?>');">
@@ -118,7 +122,12 @@
         <div class="slider__bullets glide__bullets" data-glide-el="controls[nav]"></div>
       </div>
     </div>
+    
 </body>
+
+<script>
+  AOS.init();
+</script>
 <?php get_footer(); ?>
 
 
