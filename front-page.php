@@ -22,7 +22,7 @@
         <?php 
         $today = date('Ymd');
         $home_page_events = new WP_Query(array(
-          'posts_per_page' => -1,
+          'posts_per_page' => 2,
           'post_type' =>'event',
           'meta_key' => 'event_date',
           'orderby' => 'meta_value_num',
@@ -65,7 +65,7 @@
           
           
 
-          <p class="t-center no-margin"><a href="#" class="btn btn--blue">View All Events</a></p>
+          <p class="t-center no-margin"><a href="/event" class="btn btn--blue">View All Events</a></p>
         </div>
       </div>
       <div class="full-width-split__two">
